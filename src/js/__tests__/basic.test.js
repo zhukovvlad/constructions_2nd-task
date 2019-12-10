@@ -1,7 +1,15 @@
-import sum from '../basic';
+import findBy from '../basic';
 
-test('should sum', () => {
-  const result = sum([1, 2, 3]);
+test('should check array', () => {
+  const input = [
+    { name: 'маг', type: 'character', description: 'Персонаж, обладающий магическими способностями' },
+    { name: 'заклинание', type: 'attack', description: 'Атака магическим заклинанием' },
+    { name: 'урон', type: 'help', description: 'Страница описания элемента интерфейса' },
+  ];
+  const expected = [
+    { name: 'заклинание', type: 'attack', description: 'Атака магическим заклинанием' },
+  ];
 
-  expect(result).toBe(6);
+  const result = input.filter(findBy('type', 'attack'));
+  expect(result).toEqual(expected);
 });

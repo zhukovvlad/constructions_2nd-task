@@ -1,7 +1,5 @@
-export default function sum(items) {
-  let result = 0;
-  for (const item of items) {
-    result += item;
-  }
-  return result;
+export default function findBy(prop, phrase) {
+  return function check(x) {
+    return (x[prop].search(phrase) !== -1) ? x : 0;
+  };
 }
