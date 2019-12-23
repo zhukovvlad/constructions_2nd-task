@@ -1,5 +1,8 @@
 export default function findBy(prop, phrase) {
-  return function check(x) {
-    return (x[prop].search(phrase) !== -1) ? x : 0;
+  return (x) => {
+    if (x[prop].search(phrase) !== -1) {
+      return x;
+    }
+    return 0;
   };
 }
