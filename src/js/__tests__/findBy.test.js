@@ -1,4 +1,4 @@
-import findBy from '../basic';
+import findBy from '../findBy';
 
 test('should check array', () => {
   const input = [
