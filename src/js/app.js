@@ -3,7 +3,7 @@ import findBy from './findBy';
 
 console.log('worked');
 
-const finder = findBy('name', 'маг');
+const finder = findBy('type', 'attack');
 const results = [
   { name: 'маг', type: 'character', description: 'Персонаж, обладающий магическими способностями' },
   { name: 'заклинание', type: 'attack', description: 'Атака магическим заклинанием' },
